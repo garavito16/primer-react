@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 
+let taks = ["Learn React","Climb Mt. Everest","Run a marathon","Feed the dogs"];
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="title">Hello Dojo!</h1>
+      <h3>Things I need to do:</h3>
+      <ul className="list">
+        {
+          taks.map(task=> {
+            return (<li>{task}</li>)
+          })
+        }
+      </ul>
     </div>
   );
 }
